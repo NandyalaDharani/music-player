@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aura Music Player</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <div class="app-container">
+    <!-- Sidebar Navigation -->
+    <aside class="sidebar">
+      <div class="logo">
+        <i class="fa-solid fa-headphones"></i>
+        <span>Aura Music</span>
+      </div>
+      <nav class="nav-menu">
+        <a href="#" class="nav-item active"><i class="fa-solid fa-house"></i> Home</a>
+        <a href="#" class="nav-item"><i class="fa-solid fa-magnifying-glass"></i> Search</a>
+        <a href="#" class="nav-item"><i class="fa-solid fa-book"></i> Your Library</a>
+      </nav>
+    </aside>
+
+    <!-- Main Section -->
+    <main class="main-content">
+      <header class="top-bar">
+        <h1>Featured Tracks</h1>
+      </header>
+
+      <!-- Track List -->
+      <section class="track-list">
+        <div class="list-header">
+          <span>#</span>
+          <span>Title</span>
+          <span>Artist</span>
+          <span><i class="fa-regular fa-clock"></i></span>
+        </div>
+        <div id="playlist-container" class="playlist-items"></div>
+      </section>
+    </main>
+
+    <!-- Player Dock -->
+    <footer class="player-bar">
+      <!-- Track Details -->
+      <div class="now-playing">
+        <div id="current-cover" class="cover-art">🎵</div>
+        <div class="track-info">
+          <span id="current-title" class="track-title">Select a Song</span>
+          <span id="current-artist" class="track-artist">--</span>
+        </div>
+      </div>
+
+      <!-- Controls & Seek -->
+      <div class="player-controls">
+        <div class="control-buttons">
+          <button id="prev-btn" class="btn-icon"><i class="fa-solid fa-backward-step"></i></button>
+          <button id="play-btn" class="btn-play"><i class="fa-solid fa-play"></i></button>
+          <button id="next-btn" class="btn-icon"><i class="fa-solid fa-forward-step"></i></button>
+        </div>
+        <div class="playback-bar">
+          <span id="current-time">0:00</span>
+          <input type="range" id="progress-bar" value="0" min="0" max="100">
+          <span id="duration">0:30</span>
+        </div>
+      </div>
+
+      <!-- Volume Controls -->
+      <div class="volume-controls">
+        <i class="fa-solid fa-volume-high"></i>
+        <input type="range" id="volume-bar" value="80" min="0" max="100">
+      </div>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
